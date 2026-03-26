@@ -1,11 +1,19 @@
 aid: apache-event-mesh
 name: Apache EventMesh
 description: >-
-  Apache EventMesh is a dynamic event-driven application runtime for building distributed event-driven architectures.
+  Apache EventMesh is a dynamic event-driven application runtime used to
+  decouple the application and backend middleware layer, providing a
+  serverless platform for building distributed event-driven architectures
+  with support for CloudEvents and multiple messaging protocols.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Microservices
+  - Event-Driven
+  - Serverless
+  - Apache
+  - CloudEvents
+  - Messaging
+  - Open Source
 url: >-
   https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -15,14 +23,33 @@ apis:
   - aid: apache-event-mesh:apache-event-mesh
     name: Apache EventMesh
     description: >-
-      Apache EventMesh is a dynamic event-driven application runtime for building distributed event-driven architectures.
-    humanURL: https://github.com/api-evangelist/apache-event-mesh
+      Apache EventMesh is a dynamic event-driven application runtime that
+      supports building distributed event-driven architectures with
+      decoupled microservices, providing event routing, filtering, and
+      transformation with support for CloudEvents specification and
+      multiple messaging protocols.
+    humanURL: https://eventmesh.apache.org/
     tags:
-      - Microservices
+      - Event-Driven
+      - Serverless
+      - Apache
+      - CloudEvents
+      - Messaging
+      - Open Source
     properties: []
 common:
   - type: Website
-    url: https://github.com/api-evangelist/apache-event-mesh
+    url: https://eventmesh.apache.org/
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: Getting Started
+    url: https://eventmesh.apache.org/docs/instruction/quickstart
+  - type: GitHub
+    url: https://github.com/apache/eventmesh
+  - type: Blog
+    url: https://eventmesh.apache.org/blog
+  - type: Community
+    url: https://eventmesh.apache.org/community
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
