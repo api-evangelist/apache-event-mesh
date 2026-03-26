@@ -1,0 +1,28 @@
+aid: apache-event-mesh
+name: Apache EventMesh
+description: >-
+  Apache EventMesh is a dynamic event-driven application runtime for building distributed event-driven architectures.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Microservices
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml
+created: '2026-03-26'
+modified: '2026-03-26'
+specificationVersion: '0.19'
+apis:
+  - aid: apache-event-mesh:apache-event-mesh
+    name: Apache EventMesh
+    description: >-
+      Apache EventMesh is a dynamic event-driven application runtime for building distributed event-driven architectures.
+    humanURL: https://github.com/api-evangelist/apache-event-mesh
+    tags:
+      - Microservices
+    properties: []
+common:
+  - type: Website
+    url: https://github.com/api-evangelist/apache-event-mesh
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
