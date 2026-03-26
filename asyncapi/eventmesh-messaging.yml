@@ -1,0 +1,125 @@
+asyncapi: 2.6.0
+info:
+  title: Apache EventMesh Messaging API
+  version: 1.10.0
+  description: >-
+    Apache EventMesh provides event-driven messaging via multiple protocols
+    including TCP, HTTP, and gRPC. Events follow the CloudEvents specification.
+    EventMesh decouples event producers and consumers, supporting pub-sub,
+    request-reply, and broadcast messaging patterns.
+  contact:
+    name: Apache EventMesh
+    url: https://eventmesh.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+  tcp:
+    url: localhost:10000
+    protocol: tcp
+    description: EventMesh TCP endpoint
+  grpc:
+    url: localhost:10205
+    protocol: grpc
+    description: EventMesh gRPC endpoint
+defaultContentType: application/cloudevents+json
+channels:
+  '{topic}':
+    description: >-
+      EventMesh topic for pub-sub messaging. Events are published to topics
+      and delivered to all subscribed consumer groups.
+    parameters:
+      topic:
+        description: The topic name
+        schema:
+          type: string
+    publish:
+      operationId: publishEvent
+      summary: Publish a CloudEvent to a topic
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+    subscribe:
+      operationId: subscribeEvent
+      summary: Subscribe to events on a topic
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+  '{topic}/request':
+    description: >-
+      EventMesh request-reply channel. A producer sends a request event and
+      awaits a reply event from a consumer.
+    parameters:
+      topic:
+        schema:
+          type: string
+    publish:
+      operationId: requestEvent
+      summary: Send a request event and await reply
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+    subscribe:
+      operationId: replyEvent
+      summary: Receive request and send reply
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+  '{topic}/broadcast':
+    description: >-
+      EventMesh broadcast channel. Events are delivered to all connected
+      consumers regardless of consumer group.
+    parameters:
+      topic:
+        schema:
+          type: string
+    publish:
+      operationId: broadcastEvent
+      summary: Broadcast a CloudEvent to all consumers
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+    subscribe:
+      operationId: receiveBroadcast
+      summary: Receive broadcast events
+      message:
+        $ref: '#/components/messages/CloudEventMessage'
+components:
+  messages:
+    CloudEventMessage:
+      name: CloudEventMessage
+      title: CloudEvent Message
+      summary: A CloudEvents v1.0 compliant event routed through EventMesh
+      contentType: application/cloudevents+json
+      headers:
+        type: object
+        properties:
+          ce-specversion:
+            type: string
+            const: "1.0"
+          ce-id:
+            type: string
+          ce-source:
+            type: string
+          ce-type:
+            type: string
+          ce-time:
+            type: string
+            format: date-time
+          ce-subject:
+            type: string
+          ce-datacontenttype:
+            type: string
+          env:
+            type: string
+            description: EventMesh environment
+          idc:
+            type: string
+            description: EventMesh IDC
+          sys:
+            type: string
+            description: EventMesh system
+          pid:
+            type: string
+            description: Producer/consumer process ID
+          group:
+            type: string
+            description: Consumer group
+      payload:
+        type: object
+        description: The CloudEvent data payload

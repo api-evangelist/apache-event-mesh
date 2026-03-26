@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.com/schemas/apache-event-mesh/cloudevent.json",
+  "title": "CloudEvents v1.0",
+  "description": "Schema for a CloudEvents v1.0 specification compliant event as used by Apache EventMesh.",
+  "type": "object",
+  "required": ["specversion", "id", "source", "type"],
+  "properties": {
+    "specversion": {
+      "type": "string",
+      "const": "1.0",
+      "description": "The version of the CloudEvents specification"
+    },
+    "id": {
+      "type": "string",
+      "description": "Identifies the event. Must be unique within the scope of the source."
+    },
+    "source": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "Identifies the context in which an event happened"
+    },
+    "type": {
+      "type": "string",
+      "description": "Describes the type of event related to the originating occurrence"
+    },
+    "datacontenttype": {
+      "type": "string",
+      "description": "Content type of the data value (e.g., application/json)"
+    },
+    "dataschema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Identifies the schema that data adheres to"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Describes the subject of the event in the context of the event producer"
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the occurrence happened"
+    },
+    "data": {
+      "description": "The event payload"
+    },
+    "data_base64": {
+      "type": "string",
+      "contentEncoding": "base64",
+      "description": "Base64-encoded event payload"
+    }
+  }
+}

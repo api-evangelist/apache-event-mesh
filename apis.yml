@@ -20,23 +20,43 @@ created: '2026-03-26'
 modified: '2026-03-26'
 specificationVersion: '0.19'
 apis:
-  - aid: apache-event-mesh:apache-event-mesh
-    name: Apache EventMesh
+  - aid: apache-event-mesh:eventmesh-admin-api
+    name: Apache EventMesh Admin API
     description: >-
-      Apache EventMesh is a dynamic event-driven application runtime that
-      supports building distributed event-driven architectures with
-      decoupled microservices, providing event routing, filtering, and
-      transformation with support for CloudEvents specification and
-      multiple messaging protocols.
-    humanURL: https://eventmesh.apache.org/
+      HTTP endpoints for managing the EventMesh runtime including topic
+      management, subscription management, event publishing via HTTP,
+      client monitoring, and runtime metrics.
+    humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+    baseURL: http://localhost:10106
     tags:
-      - Event-Driven
-      - Serverless
-      - Apache
+      - Admin
+      - REST API
+      - Topics
       - CloudEvents
+    properties:
+      - type: Documentation
+        url: https://eventmesh.apache.org/docs/introduction
+      - type: OpenAPI
+        url: openapi/eventmesh-admin.yml
+  - aid: apache-event-mesh:eventmesh-messaging-api
+    name: Apache EventMesh Messaging API
+    description: >-
+      Event-driven messaging via TCP, HTTP, and gRPC protocols. Events follow
+      the CloudEvents specification. Supports pub-sub, request-reply, and
+      broadcast messaging patterns.
+    humanURL: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
+    tags:
       - Messaging
-      - Open Source
-    properties: []
+      - CloudEvents
+      - Pub-Sub
+      - Event-Driven
+    properties:
+      - type: Documentation
+        url: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
+      - type: AsyncAPI
+        url: asyncapi/eventmesh-messaging.yml
+      - type: JSONSchema
+        url: json-schema/cloudevent.json
 common:
   - type: Website
     url: https://eventmesh.apache.org/
