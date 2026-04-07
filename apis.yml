@@ -8,12 +8,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Event-Driven
-  - Serverless
   - Apache
   - CloudEvents
+  - Event-Driven
   - Messaging
   - Open Source
+  - Serverless
 url: >-
   https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml
 created: '2026-03-26'
@@ -30,9 +30,9 @@ apis:
     baseURL: http://localhost:10106
     tags:
       - Admin
+      - CloudEvents
       - REST API
       - Topics
-      - CloudEvents
     properties:
       - type: Documentation
         url: https://eventmesh.apache.org/docs/introduction
@@ -46,10 +46,10 @@ apis:
       broadcast messaging patterns.
     humanURL: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
     tags:
-      - Messaging
       - CloudEvents
-      - Pub-Sub
       - Event-Driven
+      - Messaging
+      - Pub-Sub
     properties:
       - type: Documentation
         url: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
