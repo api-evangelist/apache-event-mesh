@@ -1,0 +1,108 @@
+naftiko: "1.0.0-alpha1"
+info:
+  label: "Apache EventMesh Event Streaming"
+  description: "Unified capability for event-driven architectures using Apache EventMesh — managing topics, subscriptions, and publishing CloudEvents. Designed for platform engineers and developers building distributed event streaming pipelines."
+  tags:
+    - Apache EventMesh
+    - Event-Driven
+    - CloudEvents
+    - Messaging
+    - Platform Engineering
+  created: "2026-04-19"
+  modified: "2026-04-19"
+binds:
+  - namespace: env
+    keys:
+      EVENTMESH_BASE_URL: EVENTMESH_BASE_URL
+capability:
+  consumes:
+    - import: eventmesh-admin
+      location: ./shared/eventmesh-admin.yaml
+  exposes:
+    - type: rest
+      port: 8080
+      namespace: eventmesh-streaming-api
+      description: "Unified REST API for Apache EventMesh event streaming."
+      resources:
+        - path: /v1/topics
+          name: topics
+          description: Manage EventMesh topics
+          operations:
+            - method: GET
+              name: list-topics
+              description: List all EventMesh topics
+              call: "eventmesh-admin.list-topics"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+            - method: PUT
+              name: create-topic
+              description: Create a new EventMesh topic
+              call: "eventmesh-admin.create-topic"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/subscriptions
+          name: subscriptions
+          description: Manage event subscriptions
+          operations:
+            - method: POST
+              name: create-subscription
+              description: Subscribe to EventMesh topics
+              call: "eventmesh-admin.create-subscription"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/events
+          name: events
+          description: Publish events
+          operations:
+            - method: POST
+              name: publish-event
+              description: Publish a CloudEvent
+              call: "eventmesh-admin.publish-event"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+    - type: mcp
+      port: 9090
+      namespace: eventmesh-streaming-mcp
+      transport: http
+      description: "MCP server for AI-assisted Apache EventMesh event streaming."
+      tools:
+        - name: list-eventmesh-topics
+          description: List all topics registered in EventMesh
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "eventmesh-admin.list-topics"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: create-eventmesh-topic
+          description: Create a new EventMesh topic
+          hints:
+            readOnly: false
+            destructive: false
+          call: "eventmesh-admin.create-topic"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: subscribe-to-topic
+          description: Subscribe a consumer to an EventMesh topic
+          hints:
+            readOnly: false
+            destructive: false
+          call: "eventmesh-admin.create-subscription"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: publish-cloud-event
+          description: Publish a CloudEvent to an EventMesh topic
+          hints:
+            readOnly: false
+            destructive: false
+          call: "eventmesh-admin.publish-event"
+          outputParameters:
+            - type: object
+              mapping: "$."

@@ -1,0 +1,129 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: "Apache EventMesh"
+  description: "Vocabulary taxonomy for Apache EventMesh event-driven runtime covering topics, subscriptions, CloudEvents publishing, and messaging protocols."
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: eventmesh-admin
+      version: "1.11.0"
+      baseUrl: "http://localhost:10106"
+      status: active
+      description: Apache EventMesh Admin REST API
+
+  resources:
+    - name: topics
+      apis: [eventmesh-admin]
+      actions: [list, create, delete]
+    - name: subscriptions
+      apis: [eventmesh-admin]
+      actions: [create, delete]
+    - name: events
+      apis: [eventmesh-admin]
+      actions: [publish]
+    - name: clients
+      apis: [eventmesh-admin]
+      actions: [list, get]
+
+  actions:
+    - name: list
+      httpMethods: [GET]
+      pattern: read
+    - name: get
+      httpMethods: [GET]
+      pattern: read
+    - name: create
+      httpMethods: [POST, PUT]
+      pattern: write
+    - name: delete
+      httpMethods: [DELETE]
+      pattern: destructive
+    - name: publish
+      httpMethods: [POST]
+      pattern: write
+
+  schemas:
+    core:
+      - name: CloudEvent
+        description: CloudEvents specification event envelope
+      - name: Subscription
+        description: EventMesh topic subscription definition
+      - name: Client
+        description: EventMesh client connection details
+      - name: ApiResponse
+        description: Standard API response wrapper
+
+  parameters:
+    identifiers:
+      - name: topic
+        description: EventMesh topic name
+      - name: url
+        description: Consumer callback URL
+
+  enums:
+    protocols:
+      - TCP
+      - HTTP
+      - gRPC
+
+  authentication:
+    schemes:
+      - type: None
+        description: EventMesh Admin API runs within internal network
+
+capability:
+  workflows:
+    - name: Event Streaming
+      file: capabilities/eventmesh-event-streaming.yaml
+      description: Manage topics, subscriptions, and publish CloudEvents
+      apis: [eventmesh-admin]
+      toolCount: 4
+      personas: [Platform Engineer, Developer]
+      domains: [Event Streaming, Messaging]
+
+  personas:
+    - id: platform-engineer
+      name: Platform Engineer
+      description: Engineers managing the EventMesh cluster and messaging infrastructure
+      workflows: [Event Streaming]
+    - id: developer
+      name: Developer
+      description: Application developers building event-driven services on EventMesh
+      workflows: [Event Streaming]
+
+  domains:
+    - name: Event Streaming
+      description: Topic management and event publishing via CloudEvents
+    - name: Messaging
+      description: Pub-sub, request-reply, and broadcast messaging patterns
+
+  namespaces:
+    - name: eventmesh-admin
+      type: consumed
+    - name: eventmesh-streaming-api
+      type: rest-exposed
+      port: 8080
+    - name: eventmesh-streaming-mcp
+      type: mcp-exposed
+      port: 9090
+
+  binds:
+    - name: EVENTMESH_BASE_URL
+      workflows: [Event Streaming]
+
+crossReference:
+  - resource: topics
+    operations: [list-topics, create-topic]
+    workflows: [Event Streaming]
+    personas: [Platform Engineer, Developer]
+  - resource: subscriptions
+    operations: [create-subscription]
+    workflows: [Event Streaming]
+    personas: [Developer]
+  - resource: events
+    operations: [publish-event]
+    workflows: [Event Streaming]
+    personas: [Developer]

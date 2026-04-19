@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-schema/eventmesh-admin-subscription-schema.json",
+  "title": "Subscription",
+  "description": "Subscription schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    }
+  }
+}

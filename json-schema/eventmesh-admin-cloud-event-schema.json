@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-schema/eventmesh-admin-cloud-event-schema.json",
+  "title": "CloudEvent",
+  "description": "A CloudEvents v1.0 compliant event",
+  "type": "object",
+  "properties": {
+    "specversion": {
+      "type": "string",
+      "const": "1.0",
+      "description": "CloudEvents specification version"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique event identifier"
+    },
+    "source": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "Event source identifier"
+    },
+    "type": {
+      "type": "string",
+      "description": "Event type"
+    },
+    "datacontenttype": {
+      "type": "string",
+      "description": "Content type of the data attribute"
+    },
+    "dataschema": {
+      "type": "string",
+      "format": "uri",
+      "description": "Schema for the data attribute"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject of the event in the context of the source"
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the event"
+    },
+    "data": {
+      "description": "Event payload"
+    },
+    "data_base64": {
+      "type": "string",
+      "format": "byte",
+      "description": "Base64 encoded event payload"
+    }
+  },
+  "required": [
+    "specversion",
+    "id",
+    "source",
+    "type"
+  ]
+}

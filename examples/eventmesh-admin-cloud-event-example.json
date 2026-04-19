@@ -1,0 +1,12 @@
+{
+  "specversion": "example-value",
+  "id": "evt-500123",
+  "source": "https://example.com",
+  "type": "com.example.EventType",
+  "datacontenttype": "com.example.EventType",
+  "dataschema": "https://example.com",
+  "subject": "example-value",
+  "time": "2025-03-15T14:30:00Z",
+  "data": "{}",
+  "data_base64": "{}"
+}

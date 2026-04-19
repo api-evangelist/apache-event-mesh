@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-schema/eventmesh-admin-api-response-schema.json",
+  "title": "ApiResponse",
+  "description": "ApiResponse schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "retCode": {
+      "type": "integer",
+      "description": "Return code (0 for success)"
+    },
+    "retMsg": {
+      "type": "string",
+      "description": "Return message"
+    }
+  }
+}

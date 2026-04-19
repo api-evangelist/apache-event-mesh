@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-structure/eventmesh-admin-client-structure.json",
+  "name": "Client",
+  "description": "Client schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "env": {
+      "type": "string"
+    },
+    "idc": {
+      "type": "string"
+    },
+    "sys": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "pid": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "array"
+    }
+  }
+}

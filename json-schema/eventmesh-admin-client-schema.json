@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-schema/eventmesh-admin-client-schema.json",
+  "title": "Client",
+  "description": "Client schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "env": {
+      "type": "string"
+    },
+    "idc": {
+      "type": "string"
+    },
+    "sys": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "pid": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string",
+      "enum": [
+        "HTTP",
+        "TCP",
+        "GRPC"
+      ]
+    },
+    "group": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

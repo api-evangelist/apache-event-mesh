@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-structure/eventmesh-admin-api-response-structure.json",
+  "name": "ApiResponse",
+  "description": "ApiResponse schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "retCode": {
+      "type": "int32",
+      "description": "Return code (0 for success)"
+    },
+    "retMsg": {
+      "type": "string",
+      "description": "Return message"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "eventmesh": "https://eventmesh.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "CloudEvent": "eventmesh:CloudEvent",
+    "specversion": {
+      "@id": "eventmesh:specversion",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "eventmesh:id",
+      "@type": "xsd:string"
+    },
+    "source": {
+      "@id": "eventmesh:source",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "eventmesh:type",
+      "@type": "xsd:string"
+    },
+    "datacontenttype": {
+      "@id": "eventmesh:datacontenttype",
+      "@type": "xsd:string"
+    },
+    "dataschema": {
+      "@id": "eventmesh:dataschema",
+      "@type": "@id"
+    },
+    "subject": {
+      "@id": "eventmesh:subject",
+      "@type": "xsd:string"
+    },
+    "time": {
+      "@id": "eventmesh:time",
+      "@type": "xsd:dateTime"
+    },
+    "data": {
+      "@id": "eventmesh:data",
+      "@type": "xsd:string"
+    },
+    "data_base64": {
+      "@id": "eventmesh:data_base64",
+      "@type": "xsd:string"
+    },
+    "Client": "eventmesh:Client",
+    "env": {
+      "@id": "eventmesh:env",
+      "@type": "xsd:string"
+    },
+    "idc": {
+      "@id": "eventmesh:idc",
+      "@type": "xsd:string"
+    },
+    "sys": {
+      "@id": "eventmesh:sys",
+      "@type": "xsd:string"
+    },
+    "ip": {
+      "@id": "eventmesh:ip",
+      "@type": "xsd:string"
+    },
+    "pid": {
+      "@id": "eventmesh:pid",
+      "@type": "xsd:string"
+    },
+    "protocol": {
+      "@id": "eventmesh:protocol",
+      "@type": "xsd:string"
+    },
+    "group": {
+      "@id": "eventmesh:group",
+      "@type": "xsd:string"
+    },
+    "topics": {
+      "@id": "eventmesh:topics",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "ApiResponse": "eventmesh:ApiResponse",
+    "retCode": {
+      "@id": "eventmesh:retCode",
+      "@type": "xsd:integer"
+    },
+    "retMsg": {
+      "@id": "eventmesh:retMsg",
+      "@type": "xsd:string"
+    },
+    "Subscription": "eventmesh:Subscription",
+    "topic": {
+      "@id": "eventmesh:topic",
+      "@type": "xsd:string"
+    },
+    "url": "schema:url"
+  }
+}

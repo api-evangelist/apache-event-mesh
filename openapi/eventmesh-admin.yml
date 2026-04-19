@@ -14,15 +14,15 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
-  - url: http://localhost:10106
-    description: Default EventMesh Admin HTTP endpoint
+- url: http://localhost:10106
+  description: Default EventMesh Admin HTTP endpoint
 paths:
   /topic/create:
     post:
-      summary: Create topic
+      summary: Apache EventMesh Create Topic
       operationId: createTopic
       tags:
-        - Topic
+      - Topic
       requestBody:
         required: true
         content:
@@ -30,7 +30,7 @@ paths:
             schema:
               type: object
               required:
-                - topic
+              - topic
               properties:
                 topic:
                   type: string
@@ -44,16 +44,16 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
   /topic/delete:
     delete:
-      summary: Delete topic
+      summary: Apache EventMesh Delete Topic
       operationId: deleteTopic
       tags:
-        - Topic
+      - Topic
       parameters:
-        - name: topic
-          in: query
-          required: true
-          schema:
-            type: string
+      - name: topic
+        in: query
+        required: true
+        schema:
+          type: string
       responses:
         '200':
           description: Topic deleted
@@ -63,10 +63,10 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
   /topic/list:
     get:
-      summary: List all topics
+      summary: Apache EventMesh List All Topics
       operationId: listTopics
       tags:
-        - Topic
+      - Topic
       responses:
         '200':
           description: List of topics
@@ -85,10 +85,10 @@ paths:
                       type: string
   /subscription/query:
     get:
-      summary: Query subscriptions
+      summary: Apache EventMesh Query Subscriptions
       operationId: querySubscriptions
       tags:
-        - Subscription
+      - Subscription
       responses:
         '200':
           description: List of subscriptions
@@ -105,10 +105,10 @@ paths:
                       $ref: '#/components/schemas/Subscription'
   /client/query:
     get:
-      summary: Query connected clients
+      summary: Apache EventMesh Query Connected Clients
       operationId: queryClients
       tags:
-        - Client
+      - Client
       responses:
         '200':
           description: List of connected clients
@@ -125,10 +125,10 @@ paths:
                       $ref: '#/components/schemas/Client'
   /event/publish:
     post:
-      summary: Publish CloudEvent via HTTP
+      summary: Apache EventMesh Publish CloudEvent via HTTP
       operationId: publishEvent
       tags:
-        - Event
+      - Event
       requestBody:
         required: true
         content:
@@ -147,10 +147,10 @@ paths:
                 $ref: '#/components/schemas/ApiResponse'
   /event/request:
     post:
-      summary: Request-reply event via HTTP
+      summary: Apache EventMesh Request-reply Event via HTTP
       operationId: requestEvent
       tags:
-        - Event
+      - Event
       requestBody:
         required: true
         content:
@@ -166,10 +166,10 @@ paths:
                 $ref: '#/components/schemas/CloudEvent'
   /registry/query:
     get:
-      summary: Query event mesh registry
+      summary: Apache EventMesh Query Event Mesh Registry
       operationId: queryRegistry
       tags:
-        - Registry
+      - Registry
       responses:
         '200':
           description: Registry entries
@@ -179,10 +179,10 @@ paths:
                 type: object
   /metrics:
     get:
-      summary: Get runtime metrics
+      summary: Apache EventMesh Get Runtime Metrics
       operationId: getMetrics
       tags:
-        - Monitoring
+      - Monitoring
       responses:
         '200':
           description: Runtime metrics
@@ -210,10 +210,10 @@ paths:
                         type: integer
   /configuration:
     get:
-      summary: Get runtime configuration
+      summary: Apache EventMesh Get Runtime Configuration
       operationId: getConfiguration
       tags:
-        - Monitoring
+      - Monitoring
       responses:
         '200':
           description: Runtime configuration
@@ -269,10 +269,10 @@ components:
       type: object
       description: A CloudEvents v1.0 compliant event
       required:
-        - specversion
-        - id
-        - source
-        - type
+      - specversion
+      - id
+      - source
+      - type
       properties:
         specversion:
           type: string

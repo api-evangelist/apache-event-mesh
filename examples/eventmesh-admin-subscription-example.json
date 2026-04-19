@@ -1,0 +1,6 @@
+{
+  "topic": "test-topic",
+  "url": "https://consumer.example.com/callback",
+  "group": "example-value",
+  "protocol": "example-value"
+}

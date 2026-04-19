@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-structure/eventmesh-admin-cloud-event-structure.json",
+  "name": "CloudEvent",
+  "description": "A CloudEvents v1.0 compliant event",
+  "type": "object",
+  "properties": {
+    "specversion": {
+      "type": "string",
+      "description": "CloudEvents specification version"
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique event identifier"
+    },
+    "source": {
+      "type": "uri",
+      "description": "Event source identifier"
+    },
+    "type": {
+      "type": "string",
+      "description": "Event type"
+    },
+    "datacontenttype": {
+      "type": "string",
+      "description": "Content type of the data attribute"
+    },
+    "dataschema": {
+      "type": "uri",
+      "description": "Schema for the data attribute"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject of the event in the context of the source"
+    },
+    "time": {
+      "type": "datetime",
+      "description": "Timestamp of the event"
+    },
+    "data": {
+      "type": "string",
+      "description": "Event payload"
+    },
+    "data_base64": {
+      "type": "string",
+      "description": "Base64 encoded event payload"
+    }
+  }
+}

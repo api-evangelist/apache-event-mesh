@@ -1,0 +1,12 @@
+{
+  "env": "example-value",
+  "idc": "evt-500123",
+  "sys": "example-value",
+  "ip": "example-value",
+  "pid": "evt-500123",
+  "protocol": "HTTP",
+  "group": "example-value",
+  "topics": [
+    "test-topic"
+  ]
+}

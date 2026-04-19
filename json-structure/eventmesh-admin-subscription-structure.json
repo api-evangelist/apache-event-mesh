@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/json-structure/eventmesh-admin-subscription-structure.json",
+  "name": "Subscription",
+  "description": "Subscription schema from Apache EventMesh Admin API",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    }
+  }
+}

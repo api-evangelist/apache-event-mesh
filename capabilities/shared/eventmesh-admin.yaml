@@ -1,0 +1,134 @@
+naftiko: "1.0.0-alpha1"
+info:
+  label: "Apache EventMesh Admin API"
+  description: "REST API for managing Apache EventMesh runtime, topics, subscriptions, and event publishing."
+  tags:
+    - Apache EventMesh
+    - Event-Driven
+    - Messaging
+    - CloudEvents
+  created: "2026-04-19"
+  modified: "2026-04-19"
+binds:
+  - namespace: env
+    keys:
+      EVENTMESH_BASE_URL: EVENTMESH_BASE_URL
+capability:
+  consumes:
+    - type: http
+      namespace: eventmesh-admin
+      baseUri: "http://localhost:10106"
+      description: "Apache EventMesh Admin REST API"
+      resources:
+        - name: topics
+          path: /eventmesh/topic
+          description: Manage EventMesh topics
+          operations:
+            - name: list-topics
+              method: GET
+              description: List all registered EventMesh topics
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+            - name: create-topic
+              method: PUT
+              description: Create a new EventMesh topic
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  topic: "{{tools.topic}}"
+        - name: subscriptions
+          path: /eventmesh/subscribe
+          description: Manage event subscriptions
+          operations:
+            - name: create-subscription
+              method: POST
+              description: Create a new event subscription
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  topic: "{{tools.topic}}"
+                  url: "{{tools.url}}"
+            - name: delete-subscription
+              method: DELETE
+              description: Delete an event subscription
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+        - name: events
+          path: /eventmesh/publish
+          description: Publish events
+          operations:
+            - name: publish-event
+              method: POST
+              description: Publish a CloudEvent to EventMesh
+              inputParameters: []
+              outputRawFormat: json
+              outputParameters:
+                - name: result
+                  type: object
+                  value: "$."
+              body:
+                type: json
+                data:
+                  topic: "{{tools.topic}}"
+                  content: "{{tools.content}}"
+  exposes:
+    - type: rest
+      port: 8100
+      namespace: eventmesh-admin-rest
+      resources:
+        - path: /v1/topics
+          name: topics
+          description: EventMesh topic management
+          operations:
+            - method: GET
+              name: list-topics
+              description: List EventMesh topics
+              call: "eventmesh-admin.list-topics"
+              outputParameters:
+                - type: object
+                  mapping: "$."
+    - type: mcp
+      port: 9100
+      namespace: eventmesh-admin-mcp
+      transport: http
+      tools:
+        - name: list-topics
+          description: List all EventMesh topics
+          hints:
+            readOnly: true
+            openWorld: true
+          call: "eventmesh-admin.list-topics"
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: publish-event
+          description: Publish a CloudEvent to EventMesh
+          hints:
+            readOnly: false
+            destructive: false
+          call: "eventmesh-admin.publish-event"
+          with:
+            topic: "tools.topic"
+          outputParameters:
+            - type: object
+              mapping: "$."
