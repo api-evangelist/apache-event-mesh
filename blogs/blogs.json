@@ -3,11 +3,11 @@
   "feeds": [
     {
       "source": "https://eventmesh.apache.org/blog",
-      "feed_url": "https://eventmesh.apache.org/blog/rss.xml",
-      "saved": 4,
-      "title": "Apache EventMesh Blog"
+      "feed_url": "https://eventmesh.apache.org/blog/rss",
+      "title": "Apache EventMesh Blog",
+      "saved": 0
     }
   ],
   "post_count": 4,
-  "fetched": "2026-05-03T23:22:07Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
