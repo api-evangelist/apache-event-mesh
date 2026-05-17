@@ -36,7 +36,7 @@ apis:
         url: openapi/eventmesh-admin.yml
       - type: JSONSchema
         url: json-schema/eventmesh-admin-cloud-event-schema.json
-      - type: JSON-LD
+      - type: JSONLD
         url: json-ld/apache-event-mesh-admin-context.jsonld
   - aid: apache-event-mesh:eventmesh-messaging-api
     name: Apache EventMesh Messaging API
