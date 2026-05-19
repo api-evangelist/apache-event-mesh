@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache EventMesh Admin API — Client
+  description: 'Apache EventMesh Admin API — Client. 1 operations. Lead operation: Apache EventMesh Query Connected Clients.
+    Self-contained Naftiko capability covering one Apache Event Mesh business surface.'
+  tags:
+  - Apache Event Mesh
+  - Client
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_EVENT_MESH_API_KEY: APACHE_EVENT_MESH_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: eventmesh-admin-client
+    baseUri: http://localhost:10106
+    description: Apache EventMesh Admin API — Client business capability. Self-contained, no shared references.
+    resources:
+    - name: client-query
+      path: /client/query
+      operations:
+      - name: queryclients
+        method: GET
+        description: Apache EventMesh Query Connected Clients
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: eventmesh-admin-client-rest
+    port: 8080
+    description: REST adapter for Apache EventMesh Admin API — Client. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/client/query
+      name: client-query
+      description: REST surface for client-query.
+      operations:
+      - method: GET
+        name: queryclients
+        description: Apache EventMesh Query Connected Clients
+        call: eventmesh-admin-client.queryclients
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: eventmesh-admin-client-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache EventMesh Admin API — Client. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: apache-eventmesh-query-connected-clients
+      description: Apache EventMesh Query Connected Clients
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: eventmesh-admin-client.queryclients
+      outputParameters:
+      - type: object
+        mapping: $.
