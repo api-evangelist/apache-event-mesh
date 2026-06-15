@@ -1,0 +1,187 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topic",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Create Topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:10106/topic/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Apache EventMesh Create Topic"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh Delete Topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:10106/topic/delete",
+            "params": [
+              {
+                "name": "topic",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Apache EventMesh Delete Topic"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh List All Topics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/topic/list"
+          },
+          "docs": "Apache EventMesh List All Topics"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscription",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/subscription/query"
+          },
+          "docs": "Apache EventMesh Query Subscriptions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Client",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Connected Clients",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/client/query"
+          },
+          "docs": "Apache EventMesh Query Connected Clients"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Event",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Publish CloudEvent via HTTP",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:10106/event/publish",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Apache EventMesh Publish CloudEvent via HTTP"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh Request-reply Event via HTTP",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:10106/event/request",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Apache EventMesh Request-reply Event via HTTP"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Registry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Event Mesh Registry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/registry/query"
+          },
+          "docs": "Apache EventMesh Query Event Mesh Registry"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Monitoring",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Get Runtime Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/metrics"
+          },
+          "docs": "Apache EventMesh Get Runtime Metrics"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh Get Runtime Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/configuration"
+          },
+          "docs": "Apache EventMesh Get Runtime Configuration"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

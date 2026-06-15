@@ -1,0 +1,848 @@
+{
+  "item": [
+    {
+      "id": "0635e30e-a198-4836-8972-c3a9e062117f",
+      "name": "Topic",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3162551c-87d2-42aa-9814-c4978d212c14",
+          "name": "Apache EventMesh Create Topic",
+          "request": {
+            "name": "Apache EventMesh Create Topic",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "44d81039-e647-4da5-b017-508707d1a236",
+              "name": "Topic created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"topic\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 57,\n  \"retMsg\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "34dcae27-794a-4128-9b8f-9a48df6e7735",
+          "name": "Apache EventMesh Delete Topic",
+          "request": {
+            "name": "Apache EventMesh Delete Topic",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "topic",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d56c9016-66a3-4214-b5d4-e2aadd4cafe5",
+              "name": "Topic deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "topic",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 57,\n  \"retMsg\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6534f96-5200-465c-82e7-40496fde435d",
+          "name": "Apache EventMesh List All Topics",
+          "request": {
+            "name": "Apache EventMesh List All Topics",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b29701fd-4a7a-4a1b-af69-5a384c398a18",
+              "name": "List of topics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 9761,\n  \"retMsg\": \"string\",\n  \"data\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "a8d2a666-3d6a-49d5-9358-f4ec90e77f1d",
+      "name": "Subscription",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6878a5f0-6779-499f-9716-6e4d3315c299",
+          "name": "Apache EventMesh Query Subscriptions",
+          "request": {
+            "name": "Apache EventMesh Query Subscriptions",
+            "description": {},
+            "url": {
+              "path": [
+                "subscription",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eb98ced1-a015-4427-86bc-2b094443e0a0",
+              "name": "List of subscriptions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscription",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 5310,\n  \"data\": [\n    {\n      \"topic\": \"string\",\n      \"url\": \"string\",\n      \"group\": \"string\",\n      \"protocol\": \"string\"\n    },\n    {\n      \"topic\": \"string\",\n      \"url\": \"string\",\n      \"group\": \"string\",\n      \"protocol\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "8ba7fd68-2b56-418d-94e6-8bd111e7c6da",
+      "name": "Client",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "101a8158-3ca6-44fd-8df8-425a4c1d2799",
+          "name": "Apache EventMesh Query Connected Clients",
+          "request": {
+            "name": "Apache EventMesh Query Connected Clients",
+            "description": {},
+            "url": {
+              "path": [
+                "client",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6cc181e1-aca3-48cf-9e7c-567faca77471",
+              "name": "List of connected clients",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "client",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 836,\n  \"data\": [\n    {\n      \"env\": \"string\",\n      \"idc\": \"string\",\n      \"sys\": \"string\",\n      \"ip\": \"string\",\n      \"pid\": \"string\",\n      \"protocol\": \"TCP\",\n      \"group\": \"string\",\n      \"topics\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"env\": \"string\",\n      \"idc\": \"string\",\n      \"sys\": \"string\",\n      \"ip\": \"string\",\n      \"pid\": \"string\",\n      \"protocol\": \"GRPC\",\n      \"group\": \"string\",\n      \"topics\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "52ad59e2-b9a0-416b-bb6f-4530e7105c71",
+      "name": "Event",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3b0e4173-243e-40b4-877d-874d9894cbef",
+          "name": "Apache EventMesh Publish CloudEvent via HTTP",
+          "request": {
+            "name": "Apache EventMesh Publish CloudEvent via HTTP",
+            "description": {},
+            "url": {
+              "path": [
+                "event",
+                "publish"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"specversion\": \"<string>\",\n  \"id\": \"<string>\",\n  \"source\": \"<uri-reference>\",\n  \"type\": \"<string>\",\n  \"datacontenttype\": \"<string>\",\n  \"dataschema\": \"<uri>\",\n  \"subject\": \"<string>\",\n  \"time\": \"<dateTime>\",\n  \"data\": {},\n  \"data_base64\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5a332f65-d9ea-4443-be4b-2de4e86314e1",
+              "name": "Event published",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "event",
+                    "publish"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"specversion\": \"<string>\",\n  \"id\": \"<string>\",\n  \"source\": \"<uri-reference>\",\n  \"type\": \"<string>\",\n  \"datacontenttype\": \"<string>\",\n  \"dataschema\": \"<uri>\",\n  \"subject\": \"<string>\",\n  \"time\": \"<dateTime>\",\n  \"data\": {},\n  \"data_base64\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 57,\n  \"retMsg\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "37f48977-4480-4a66-95f2-984cad4cf441",
+          "name": "Apache EventMesh Request-reply Event via HTTP",
+          "request": {
+            "name": "Apache EventMesh Request-reply Event via HTTP",
+            "description": {},
+            "url": {
+              "path": [
+                "event",
+                "request"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/cloudevents+json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/cloudevents+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"specversion\": \"<string>\",\n  \"id\": \"<string>\",\n  \"source\": \"<uri-reference>\",\n  \"type\": \"<string>\",\n  \"datacontenttype\": \"<string>\",\n  \"dataschema\": \"<uri>\",\n  \"subject\": \"<string>\",\n  \"time\": \"<dateTime>\",\n  \"data\": {},\n  \"data_base64\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f96dc978-54be-4c9e-91fb-bcb6cc073c5c",
+              "name": "Reply event",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "event",
+                    "request"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/cloudevents+json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"specversion\": \"<string>\",\n  \"id\": \"<string>\",\n  \"source\": \"<uri-reference>\",\n  \"type\": \"<string>\",\n  \"datacontenttype\": \"<string>\",\n  \"dataschema\": \"<uri>\",\n  \"subject\": \"<string>\",\n  \"time\": \"<dateTime>\",\n  \"data\": {},\n  \"data_base64\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/cloudevents+json"
+                }
+              ],
+              "body": "{\n  \"specversion\": \"string\",\n  \"id\": \"string\",\n  \"source\": \"https://IDqD.deCW.fpXTs4IIHSEWTWLyc,LOTxjx3gqBvxN?k=Td&\",\n  \"type\": \"string\",\n  \"datacontenttype\": \"string\",\n  \"dataschema\": \"https://Ax.yutlshw3QUxa-iY8STDz0PwTDTP6qCfHoGPaeqMTlQpy8QJxw\",\n  \"subject\": \"string\",\n  \"time\": \"2015-10-24T21:21:59.132Z\",\n  \"data\": {},\n  \"data_base64\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "764289a0-4f83-404e-95e2-339e1031f85b",
+      "name": "Registry",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "df4318e4-bf5a-4332-a44c-e8099ebb937a",
+          "name": "Apache EventMesh Query Event Mesh Registry",
+          "request": {
+            "name": "Apache EventMesh Query Event Mesh Registry",
+            "description": {},
+            "url": {
+              "path": [
+                "registry",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1447eced-4c5a-4429-b1f3-c3617bf413ff",
+              "name": "Registry entries",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "registry",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "b6157502-0aab-4e2d-9a86-80946aa7732c",
+      "name": "Monitoring",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "54d92cae-1710-480b-9695-ca534f835484",
+          "name": "Apache EventMesh Get Runtime Metrics",
+          "request": {
+            "name": "Apache EventMesh Get Runtime Metrics",
+            "description": {},
+            "url": {
+              "path": [
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5a21383b-dd61-4e07-843c-c5e9152ac268",
+              "name": "Runtime metrics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 9164,\n  \"data\": {\n    \"httpInMessageCount\": 8666,\n    \"httpOutMessageCount\": 1284,\n    \"tcpInMessageCount\": 9708,\n    \"tcpOutMessageCount\": 2625,\n    \"grpcInMessageCount\": 2956,\n    \"grpcOutMessageCount\": 9385\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d4f686e-8fe3-4bb2-ac59-b122e03b581a",
+          "name": "Apache EventMesh Get Runtime Configuration",
+          "request": {
+            "name": "Apache EventMesh Get Runtime Configuration",
+            "description": {},
+            "url": {
+              "path": [
+                "configuration"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c6d9ca53-b17c-4f48-8f1b-3d4ed0063c5a",
+              "name": "Runtime configuration",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "configuration"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:10106",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "28138061-f197-4269-960d-a22338f1ec11",
+    "name": "Apache EventMesh Admin API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.\n\nContact Support:\n Name: Apache EventMesh",
+      "type": "text/plain"
+    }
+  }
+}
