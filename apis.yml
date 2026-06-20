@@ -5,7 +5,7 @@ description: >-
   layer, providing a serverless platform for building distributed event-driven architectures with support for
   CloudEvents and multiple messaging protocols including HTTP, TCP, and gRPC.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Apache
   - CloudEvents
