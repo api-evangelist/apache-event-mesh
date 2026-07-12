@@ -57,6 +57,10 @@ apis:
       - type: AsyncAPI
         url: asyncapi/eventmesh-messaging.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-event-mesh-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-event-mesh-domain-security.yml
   - type: Documentation
     url: https://eventmesh.apache.org/docs/introduction
   - type: GettingStarted
