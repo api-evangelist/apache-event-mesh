@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Apache EventMesh Admin Client Monitoring API
+  description: The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.
+  version: 1.10.0
+  contact:
+    name: Apache EventMesh
+    url: https://eventmesh.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://localhost:10106
+  description: Default EventMesh Admin HTTP endpoint
+tags:
+- name: Monitoring
+paths:
+  /metrics:
+    get:
+      summary: Apache EventMesh Get Runtime Metrics
+      operationId: getMetrics
+      tags:
+      - Monitoring
+      responses:
+        '200':
+          description: Runtime metrics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  retCode:
+                    type: integer
+                  data:
+                    type: object
+                    properties:
+                      httpInMessageCount:
+                        type: integer
+                      httpOutMessageCount:
+                        type: integer
+                      tcpInMessageCount:
+                        type: integer
+                      tcpOutMessageCount:
+                        type: integer
+                      grpcInMessageCount:
+                        type: integer
+                      grpcOutMessageCount:
+                        type: integer
+  /configuration:
+    get:
+      summary: Apache EventMesh Get Runtime Configuration
+      operationId: getConfiguration
+      tags:
+      - Monitoring
+      responses:
+        '200':
+          description: Runtime configuration
+          content:
+            application/json:
+              schema:
+                type: object

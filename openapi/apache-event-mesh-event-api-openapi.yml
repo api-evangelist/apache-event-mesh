@@ -1,0 +1,112 @@
+openapi: 3.1.0
+info:
+  title: Apache EventMesh Admin Client Event API
+  description: The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.
+  version: 1.10.0
+  contact:
+    name: Apache EventMesh
+    url: https://eventmesh.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://localhost:10106
+  description: Default EventMesh Admin HTTP endpoint
+tags:
+- name: Event
+paths:
+  /event/publish:
+    post:
+      summary: Apache EventMesh Publish CloudEvent via HTTP
+      operationId: publishEvent
+      tags:
+      - Event
+      requestBody:
+        required: true
+        content:
+          application/cloudevents+json:
+            schema:
+              $ref: '#/components/schemas/CloudEvent'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CloudEvent'
+      responses:
+        '200':
+          description: Event published
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /event/request:
+    post:
+      summary: Apache EventMesh Request-reply Event via HTTP
+      operationId: requestEvent
+      tags:
+      - Event
+      requestBody:
+        required: true
+        content:
+          application/cloudevents+json:
+            schema:
+              $ref: '#/components/schemas/CloudEvent'
+      responses:
+        '200':
+          description: Reply event
+          content:
+            application/cloudevents+json:
+              schema:
+                $ref: '#/components/schemas/CloudEvent'
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        retCode:
+          type: integer
+          description: Return code (0 for success)
+        retMsg:
+          type: string
+          description: Return message
+    CloudEvent:
+      type: object
+      description: A CloudEvents v1.0 compliant event
+      required:
+      - specversion
+      - id
+      - source
+      - type
+      properties:
+        specversion:
+          type: string
+          const: '1.0'
+          description: CloudEvents specification version
+        id:
+          type: string
+          description: Unique event identifier
+        source:
+          type: string
+          format: uri-reference
+          description: Event source identifier
+        type:
+          type: string
+          description: Event type
+        datacontenttype:
+          type: string
+          description: Content type of the data attribute
+        dataschema:
+          type: string
+          format: uri
+          description: Schema for the data attribute
+        subject:
+          type: string
+          description: Subject of the event in the context of the source
+        time:
+          type: string
+          format: date-time
+          description: Timestamp of the event
+        data:
+          description: Event payload
+        data_base64:
+          type: string
+          format: byte
+          description: Base64 encoded event payload

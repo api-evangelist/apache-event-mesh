@@ -1,0 +1,94 @@
+openapi: 3.1.0
+info:
+  title: Apache EventMesh Admin Client Topic API
+  description: The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.
+  version: 1.10.0
+  contact:
+    name: Apache EventMesh
+    url: https://eventmesh.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://localhost:10106
+  description: Default EventMesh Admin HTTP endpoint
+tags:
+- name: Topic
+paths:
+  /topic/create:
+    post:
+      summary: Apache EventMesh Create Topic
+      operationId: createTopic
+      tags:
+      - Topic
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - topic
+              properties:
+                topic:
+                  type: string
+                  description: Topic name
+      responses:
+        '200':
+          description: Topic created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /topic/delete:
+    delete:
+      summary: Apache EventMesh Delete Topic
+      operationId: deleteTopic
+      tags:
+      - Topic
+      parameters:
+      - name: topic
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Topic deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+  /topic/list:
+    get:
+      summary: Apache EventMesh List All Topics
+      operationId: listTopics
+      tags:
+      - Topic
+      responses:
+        '200':
+          description: List of topics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  retCode:
+                    type: integer
+                  retMsg:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: string
+components:
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        retCode:
+          type: integer
+          description: Return code (0 for success)
+        retMsg:
+          type: string
+          description: Return message
