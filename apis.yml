@@ -5,7 +5,19 @@ description: >-
   layer, providing a serverless platform for building distributed event-driven architectures with support for
   CloudEvents and multiple messaging protocols including HTTP, TCP, and gRPC.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-event-mesh.png
 tags:
   - Apache
   - CloudEvents
@@ -19,43 +31,118 @@ created: '2026-03-26'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: apache-event-mesh:eventmesh-admin-api
-    name: Apache EventMesh Admin API
-    description: >-
-      HTTP endpoints for managing the EventMesh runtime including topic management, subscription management, event
-      publishing via HTTP, client monitoring, and runtime metrics.
-    humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
-    baseURL: http://localhost:10106
-    tags:
-      - Admin
-      - CloudEvents
-      - REST API
-      - Topics
-    properties:
-      - type: Documentation
-        url: https://eventmesh.apache.org/docs/introduction
-      - type: OpenAPI
-        url: openapi/eventmesh-admin.yml
-      - type: JSONSchema
-        url: json-schema/eventmesh-admin-cloud-event-schema.json
-      - type: JSONLD
-        url: json-ld/apache-event-mesh-admin-context.jsonld
-  - aid: apache-event-mesh:eventmesh-messaging-api
-    name: Apache EventMesh Messaging API
-    description: >-
-      Event-driven messaging via TCP, HTTP, and gRPC protocols. Events follow the CloudEvents specification. Supports
-      pub-sub, request-reply, and broadcast messaging patterns.
-    humanURL: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
-    tags:
-      - CloudEvents
-      - Event-Driven
-      - Messaging
-      - Pub-Sub
-    properties:
-      - type: Documentation
-        url: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
-      - type: AsyncAPI
-        url: asyncapi/eventmesh-messaging.yml
+- aid: apache-event-mesh:eventmesh-messaging-api
+  name: Apache EventMesh Messaging API
+  description: >-
+    Event-driven messaging via TCP, HTTP, and gRPC protocols. Events follow the CloudEvents specification.
+    Supports pub-sub, request-reply, and broadcast messaging patterns.
+  humanURL: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
+  tags:
+  - CloudEvents
+  - Event-Driven
+  - Messaging
+  - Pub-Sub
+  properties:
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
+  - type: AsyncAPI
+    url: asyncapi/eventmesh-messaging.yml
+- aid: apache-event-mesh:apache-event-mesh-client-api
+  name: Apache EventMesh Client API
+  description: The Client API from Apache EventMesh — 1 operation(s) for client.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Client
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-client-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
+- aid: apache-event-mesh:apache-event-mesh-event-api
+  name: Apache EventMesh Event API
+  description: The Event API from Apache EventMesh — 2 operation(s) for event.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Event
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-event-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
+- aid: apache-event-mesh:apache-event-mesh-monitoring-api
+  name: Apache EventMesh Monitoring API
+  description: The Monitoring API from Apache EventMesh — 2 operation(s) for monitoring.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Monitoring
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-monitoring-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
+- aid: apache-event-mesh:apache-event-mesh-registry-api
+  name: Apache EventMesh Registry API
+  description: The Registry API from Apache EventMesh — 1 operation(s) for registry.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Registry
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-registry-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
+- aid: apache-event-mesh:apache-event-mesh-subscription-api
+  name: Apache EventMesh Subscription API
+  description: The Subscription API from Apache EventMesh — 1 operation(s) for subscription.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Subscription
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-subscription-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
+- aid: apache-event-mesh:apache-event-mesh-topic-api
+  name: Apache EventMesh Topic API
+  description: The Topic API from Apache EventMesh — 3 operation(s) for topic.
+  humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
+  baseURL: http://localhost:10106
+  tags:
+  - Topic
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-event-mesh-topic-api-openapi.yml
+  - type: Documentation
+    url: https://eventmesh.apache.org/docs/introduction
+  - type: JSONSchema
+    url: json-schema/eventmesh-admin-cloud-event-schema.json
+  - type: JSONLD
+    url: json-ld/apache-event-mesh-admin-context.jsonld
 common:
   - type: AgenticAccess
     url: agentic-access/apache-event-mesh-agentic-access.yml
