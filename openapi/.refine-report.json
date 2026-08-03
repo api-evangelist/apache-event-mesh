@@ -1,0 +1,24 @@
+{
+  "provider": "apache-event-mesh",
+  "sources": [
+    "apache-event-mesh-client-api-openapi.yml",
+    "apache-event-mesh-event-api-openapi.yml",
+    "apache-event-mesh-monitoring-api-openapi.yml",
+    "apache-event-mesh-registry-api-openapi.yml",
+    "apache-event-mesh-subscription-api-openapi.yml",
+    "apache-event-mesh-topic-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-event-mesh-client-api-openapi.yml",
+    "apache-event-mesh-event-api-openapi.yml",
+    "apache-event-mesh-monitoring-api-openapi.yml",
+    "apache-event-mesh-registry-api-openapi.yml",
+    "apache-event-mesh-subscription-api-openapi.yml",
+    "apache-event-mesh-topic-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
