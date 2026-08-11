@@ -144,6 +144,15 @@ apis:
   - type: JSONLD
     url: json-ld/apache-event-mesh-admin-context.jsonld
 common:
+  - type: IssueTracker
+    url: https://github.com/apache/eventmesh/issues
+  - type: Releases
+    url: https://github.com/apache/eventmesh/releases
+  - type: CodeOfConduct
+    url: https://github.com/apache/.github/blob/main/.github/CODE_OF_CONDUCT.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/apache/eventmesh/blob/develop/LICENSE
   - type: AgenticAccess
     url: agentic-access/apache-event-mesh-agentic-access.yml
   - type: VulnerabilityDisclosure
