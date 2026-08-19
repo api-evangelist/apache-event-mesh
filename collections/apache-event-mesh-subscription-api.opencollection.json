@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin Client Subscription API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Subscription",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/subscription/query"
+          },
+          "docs": "Apache EventMesh Query Subscriptions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

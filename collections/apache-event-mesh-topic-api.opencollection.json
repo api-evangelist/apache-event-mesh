@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin Client Topic API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topic",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Create Topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:10106/topic/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Apache EventMesh Create Topic"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh Delete Topic",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://localhost:10106/topic/delete",
+            "params": [
+              {
+                "name": "topic",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Apache EventMesh Delete Topic"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh List All Topics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/topic/list"
+          },
+          "docs": "Apache EventMesh List All Topics"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

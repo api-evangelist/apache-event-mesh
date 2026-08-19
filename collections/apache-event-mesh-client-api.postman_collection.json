@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "04846948-3230-4c37-b3e6-f6136b2e6d13",
+      "name": "Client",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6cf14e3a-0822-4714-a34d-61ca54e6f2d3",
+          "name": "Apache EventMesh Query Connected Clients",
+          "request": {
+            "name": "Apache EventMesh Query Connected Clients",
+            "description": {},
+            "url": {
+              "path": [
+                "client",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "92bbf06a-1999-4170-86f9-cb51b498e341",
+              "name": "List of connected clients",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "client",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 4174,\n  \"data\": [\n    {\n      \"env\": \"string\",\n      \"idc\": \"string\",\n      \"sys\": \"string\",\n      \"ip\": \"string\",\n      \"pid\": \"string\",\n      \"protocol\": \"TCP\",\n      \"group\": \"string\",\n      \"topics\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"env\": \"string\",\n      \"idc\": \"string\",\n      \"sys\": \"string\",\n      \"ip\": \"string\",\n      \"pid\": \"string\",\n      \"protocol\": \"TCP\",\n      \"group\": \"string\",\n      \"topics\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:10106",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "adbf1342-f990-4d49-86df-8df716ed5731",
+    "name": "Apache EventMesh Admin Client API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.\n\nContact Support:\n Name: Apache EventMesh",
+      "type": "text/plain"
+    }
+  }
+}

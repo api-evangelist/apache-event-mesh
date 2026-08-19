@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin Client Monitoring API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Monitoring",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Get Runtime Metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/metrics"
+          },
+          "docs": "Apache EventMesh Get Runtime Metrics"
+        },
+        {
+          "info": {
+            "name": "Apache EventMesh Get Runtime Configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/configuration"
+          },
+          "docs": "Apache EventMesh Get Runtime Configuration"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

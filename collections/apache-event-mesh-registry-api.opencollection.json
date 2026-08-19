@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin Client Registry API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Registry",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Event Mesh Registry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/registry/query"
+          },
+          "docs": "Apache EventMesh Query Event Mesh Registry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache EventMesh Admin Client API",
+    "version": "1.10.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Client",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache EventMesh Query Connected Clients",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:10106/client/query"
+          },
+          "docs": "Apache EventMesh Query Connected Clients"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

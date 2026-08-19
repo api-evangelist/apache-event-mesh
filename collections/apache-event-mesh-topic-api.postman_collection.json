@@ -1,0 +1,272 @@
+{
+  "item": [
+    {
+      "id": "e643ebd5-f4e6-44c7-a3f8-8248deb030d6",
+      "name": "Topic",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "99e418f9-fe7e-4e18-a684-4e5cbbc3d512",
+          "name": "Apache EventMesh Create Topic",
+          "request": {
+            "name": "Apache EventMesh Create Topic",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "create"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "79c5da2c-3e4b-40ae-a484-fcbe740d9e93",
+              "name": "Topic created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "create"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"topic\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 4209,\n  \"retMsg\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e46e3393-f2d4-4724-b56b-dd2853506fc5",
+          "name": "Apache EventMesh Delete Topic",
+          "request": {
+            "name": "Apache EventMesh Delete Topic",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "delete"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "topic",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "693d371c-4321-41c7-9ee9-a6c2608002bd",
+              "name": "Topic deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "delete"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "topic",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 4209,\n  \"retMsg\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "df9e5890-8187-43a3-9c2f-0b45b55aaf0e",
+          "name": "Apache EventMesh List All Topics",
+          "request": {
+            "name": "Apache EventMesh List All Topics",
+            "description": {},
+            "url": {
+              "path": [
+                "topic",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "943a72ec-b2b3-4c70-9036-9b40aa6edce3",
+              "name": "List of topics",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topic",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 3818,\n  \"retMsg\": \"string\",\n  \"data\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:10106",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3822ac12-7ce5-4a52-9e0d-61baa111bad0",
+    "name": "Apache EventMesh Admin Client Topic API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.\n\nContact Support:\n Name: Apache EventMesh",
+      "type": "text/plain"
+    }
+  }
+}

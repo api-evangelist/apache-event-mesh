@@ -1,0 +1,101 @@
+{
+  "item": [
+    {
+      "id": "f61cfbf6-eb43-464c-a193-71eff4173823",
+      "name": "Subscription",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1c616f47-dc9b-4b5a-bab0-64ab4f79f4e6",
+          "name": "Apache EventMesh Query Subscriptions",
+          "request": {
+            "name": "Apache EventMesh Query Subscriptions",
+            "description": {},
+            "url": {
+              "path": [
+                "subscription",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29f613c8-313e-4846-85f7-1081487258f7",
+              "name": "List of subscriptions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "subscription",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"retCode\": 2458,\n  \"data\": [\n    {\n      \"topic\": \"string\",\n      \"url\": \"string\",\n      \"group\": \"string\",\n      \"protocol\": \"string\"\n    },\n    {\n      \"topic\": \"string\",\n      \"url\": \"string\",\n      \"group\": \"string\",\n      \"protocol\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:10106",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6265b0f5-3f13-4153-9e39-d52410ba0646",
+    "name": "Apache EventMesh Admin Client Subscription API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Apache EventMesh Admin API provides HTTP endpoints for managing the EventMesh runtime, including topic management, subscription management, event publishing, and runtime monitoring. EventMesh supports CloudEvents specification for event formatting.\n\nContact Support:\n Name: Apache EventMesh",
+      "type": "text/plain"
+    }
+  }
+}
