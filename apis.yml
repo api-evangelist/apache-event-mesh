@@ -23,6 +23,14 @@ tags:
   - CloudEvents
   - Event-Driven
   - Messaging
+  - Open-Source
+  - Pub-Sub
+  - Serverless
+tags_raw:
+  - Apache
+  - CloudEvents
+  - Event-Driven
+  - Messaging
   - Open Source
   - Pub-Sub
   - Serverless
@@ -53,6 +61,8 @@ apis:
   humanURL: https://eventmesh.apache.org/docs/instruction/quickstart
   baseURL: http://localhost:10106
   tags:
+  - Clients
+  tags_raw:
   - Client
   properties:
   - type: OpenAPI
