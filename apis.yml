@@ -167,6 +167,8 @@ apis:
   - type: JSONLD
     url: json-ld/apache-event-mesh-admin-context.jsonld
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: IssueTracker
     url: https://github.com/apache/eventmesh/issues
   - type: Releases
