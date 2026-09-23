@@ -1,12 +1,7 @@
 {
   "provider": "apache-event-mesh",
   "sources": [
-    "apache-event-mesh-client-api-openapi.yml",
-    "apache-event-mesh-event-api-openapi.yml",
-    "apache-event-mesh-monitoring-api-openapi.yml",
-    "apache-event-mesh-registry-api-openapi.yml",
-    "apache-event-mesh-subscription-api-openapi.yml",
-    "apache-event-mesh-topic-api-openapi.yml"
+    "_original/eventmesh-admin.yml"
   ],
   "outputs": [
     "apache-event-mesh-client-api-openapi.yml",
@@ -19,6 +14,23 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "eventmesh-admin.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "eventmesh-admin.yml: declared missing tag: Client",
+    "eventmesh-admin.yml: declared missing tag: Event",
+    "eventmesh-admin.yml: declared missing tag: Monitoring",
+    "eventmesh-admin.yml: declared missing tag: Registry",
+    "eventmesh-admin.yml: declared missing tag: Subscription",
+    "eventmesh-admin.yml: declared missing tag: Topic",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "apache-event-mesh-client-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-event-mesh-event-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-event-mesh-monitoring-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-event-mesh-registry-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-event-mesh-subscription-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-event-mesh-topic-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
