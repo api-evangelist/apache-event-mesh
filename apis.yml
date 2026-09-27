@@ -39,7 +39,7 @@ tags:
   - CloudEvents
   - Event-Driven
   - Messaging
-  - Open-Source
+  - Open Source
   - Pub-Sub
   - Serverless
 tags_raw:
@@ -50,6 +50,7 @@ tags_raw:
   - Open Source
   - Pub-Sub
   - Serverless
+  - Open-Source
 url: https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml
 created: '2026-03-26'
 modified: '2026-05-19'
