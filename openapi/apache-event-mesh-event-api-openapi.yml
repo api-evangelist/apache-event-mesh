@@ -58,15 +58,6 @@ paths:
                 $ref: '#/components/schemas/CloudEvent'
 components:
   schemas:
-    ApiResponse:
-      type: object
-      properties:
-        retCode:
-          type: integer
-          description: Return code (0 for success)
-        retMsg:
-          type: string
-          description: Return message
     CloudEvent:
       type: object
       description: A CloudEvents v1.0 compliant event
@@ -110,3 +101,12 @@ components:
           type: string
           format: byte
           description: Base64 encoded event payload
+    ApiResponse:
+      type: object
+      properties:
+        retCode:
+          type: integer
+          description: Return code (0 for success)
+        retMsg:
+          type: string
+          description: Return message
