@@ -40,7 +40,7 @@ tags:
   - Event-Driven
   - Messaging
   - Open Source
-  - Pub-Sub
+  - Pub/Sub
   - Serverless
 tags_raw:
   - Apache
@@ -63,6 +63,11 @@ apis:
     Supports pub-sub, request-reply, and broadcast messaging patterns.
   humanURL: https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage
   tags:
+  - CloudEvents
+  - Event-Driven
+  - Messaging
+  - Pub/Sub
+  tags_raw:
   - CloudEvents
   - Event-Driven
   - Messaging
