@@ -1,4 +1,4 @@
-# Apache EventMesh (apache-event-mesh)
+# Apache EventMesh
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,87 +66,191 @@
 
 Apache EventMesh is a dynamic event-driven application runtime used to decouple the application and backend middleware layer, providing a serverless platform for building distributed event-driven architectures with support for CloudEvents and multiple messaging protocols including HTTP, TCP, and gRPC.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/apis.yml)
+**Areas:** Apache · CloudEvents · Event-Driven · Messaging · Open Source · Pub/Sub · Serverless
 
-## Scope
+## Apache EventMesh on APIs.io
 
-- **Type:** Index
+Everything profiled for Apache EventMesh is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-event-mesh/](https://apis.io/providers/apache-event-mesh/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- Apache
-- CloudEvents
-- Event-Driven
-- Messaging
-- Open Source
-- Pub-Sub
-- Serverless
+- [Apache EventMesh Messaging API](https://apis.io/apis/apache-event-mesh/eventmesh-messaging-api/) — Event-driven messaging via TCP, HTTP, and gRPC protocols. Events follow the CloudEvents specification. Supports pub-sub, request-reply, and broadcast…
+- [Apache EventMesh Client API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-client-api/) — The Client API from Apache EventMesh — 1 operation(s) for client.
+- [Apache EventMesh Event API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-event-api/) — The Event API from Apache EventMesh — 2 operation(s) for event.
+- [Apache EventMesh Monitoring API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-monitoring-api/) — The Monitoring API from Apache EventMesh — 2 operation(s) for monitoring.
+- [Apache EventMesh Registry API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-registry-api/) — The Registry API from Apache EventMesh — 1 operation(s) for registry.
+- [Apache EventMesh Subscription API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-subscription-api/) — The Subscription API from Apache EventMesh — 1 operation(s) for subscription.
+- [Apache EventMesh Topic API](https://apis.io/apis/apache-event-mesh/apache-event-mesh-topic-api/) — The Topic API from Apache EventMesh — 3 operation(s) for topic.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-26
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### AsyncAPI (1)
 
-### Apache EventMesh Admin API
+Event-driven and webhook contracts.
 
-HTTP endpoints for managing the EventMesh runtime including topic management, subscription management, event publishing via HTTP, client monitoring, and runtime metrics.
+- [Apache EventMesh Messaging API](https://apis.io/asyncapis/apache-event-mesh/eventmesh-messaging/)
 
-- **Human URL:** [https://eventmesh.apache.org/docs/instruction/quickstart](https://eventmesh.apache.org/docs/instruction/quickstart)
-- **Base URL:** `http://localhost:10106`
+#### Event channels (3)
 
-#### Tags
+Individual events and webhooks the provider emits.
 
-- Admin
-- CloudEvents
-- REST API
-- Topics
+- [{topic}](https://apis.io/channels/apache-event-mesh/topic/)
+- [{topic}/broadcast](https://apis.io/channels/apache-event-mesh/topic-broadcast/)
+- [{topic}/request](https://apis.io/channels/apache-event-mesh/topic-request/)
 
-#### Properties
+#### Agentic access (1)
 
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Apache Event Mesh Agentic Access](https://apis.io/agentic-access/apache-event-mesh/apache-event-mesh-agentic-access/)
+
+#### JSON Schema (5)
+
+The data models the API reads and writes.
+
+- [CloudEvents v1.0](https://apis.io/schemas/apache-event-mesh/cloudevent/)
+- [ApiResponse](https://apis.io/schemas/apache-event-mesh/eventmesh-admin-api-response/)
+- [Client](https://apis.io/schemas/apache-event-mesh/eventmesh-admin-client/)
+- [CloudEvent](https://apis.io/schemas/apache-event-mesh/eventmesh-admin-cloud-event/)
+- [Subscription](https://apis.io/schemas/apache-event-mesh/eventmesh-admin-subscription/)
+
+#### JSON Structure (4)
+
+Data models expressed in JSON Structure.
+
+- [Eventmesh Admin Api Response Structure](https://apis.io/json-structure/apache-event-mesh/eventmesh-admin-api-response-structure/)
+- [Eventmesh Admin Client Structure](https://apis.io/json-structure/apache-event-mesh/eventmesh-admin-client-structure/)
+- [Eventmesh Admin Cloud Event Structure](https://apis.io/json-structure/apache-event-mesh/eventmesh-admin-cloud-event-structure/)
+- [Eventmesh Admin Subscription Structure](https://apis.io/json-structure/apache-event-mesh/eventmesh-admin-subscription-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apache Event Mesh Admin Context](https://apis.io/jsonld/apache-event-mesh/apache-event-mesh-admin-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apache Event Mesh Vocabulary](https://apis.io/vocabularies/apache-event-mesh/apache-event-mesh-vocabulary/)
+
+#### Examples (4)
+
+Example requests and responses.
+
+- [Eventmesh Admin Api Response Example](https://apis.io/examples/apache-event-mesh/eventmesh-admin-api-response-example/)
+- [Eventmesh Admin Client Example](https://apis.io/examples/apache-event-mesh/eventmesh-admin-client-example/)
+- [Eventmesh Admin Cloud Event Example](https://apis.io/examples/apache-event-mesh/eventmesh-admin-cloud-event-example/)
+- [Eventmesh Admin Subscription Example](https://apis.io/examples/apache-event-mesh/eventmesh-admin-subscription-example/)
+
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Apache EventMesh Admin Client API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-client-api/)
+- [Apache EventMesh Admin Client Event API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-event-api/)
+- [Apache EventMesh Admin Client Monitoring API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-monitoring-api/)
+- [Apache EventMesh Admin Client Registry API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-registry-api/)
+- [Apache EventMesh Admin Client Subscription API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-subscription-api/)
+- [Apache EventMesh Admin Client Topic API](https://apis.io/collections/apache-event-mesh/open-apache-event-mesh-topic-api/)
+- [Apache EventMesh Admin API](https://apis.io/collections/apache-event-mesh/open-eventmesh-admin/)
+
+#### Governance rules (3)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache EventMesh — asyncapi rules](https://apis.io/rules/apache-event-mesh/apache-event-mesh-asyncapi-spectral-rules/)
+- [Apache EventMesh — jsonschema rules](https://apis.io/rules/apache-event-mesh/apache-event-mesh-jsonschema-spectral-rules/)
+- [Apache EventMesh API Rules](https://apis.io/rules/apache-event-mesh/apache-event-mesh-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Event Mesh Domain Security](https://apis.io/security/apache-event-mesh/apache-event-mesh-domain-security/)
+- [Apache Event Mesh Vulnerability Disclosure](https://apis.io/security/apache-event-mesh/apache-event-mesh-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Event Mesh Plans Pricing](https://apis.io/plans/apache-event-mesh/apache-event-mesh-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Event Mesh Rate Limits](https://apis.io/rate-limits/apache-event-mesh/apache-event-mesh-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Event Mesh Finops](https://apis.io/finops/apache-event-mesh/apache-event-mesh-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://eventmesh.apache.org/docs/introduction)
-- [OpenAPI](openapi/eventmesh-admin.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/eventmesh-admin.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/eventmesh-admin.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/eventmesh-admin-cloud-event-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON-LD](json-ld/apache-event-mesh-admin-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-
-### Apache EventMesh Messaging API
-
-Event-driven messaging via TCP, HTTP, and gRPC protocols. Events follow the CloudEvents specification. Supports pub-sub, request-reply, and broadcast messaging patterns.
-
-- **Human URL:** [https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage](https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage)
-
-#### Tags
-
-- CloudEvents
-- Event-Driven
-- Messaging
-- Pub-Sub
-
-#### Properties
-
-- [Documentation](https://eventmesh.apache.org/docs/sdk-java/tcp-sdk-usage)
-- [AsyncAPI](asyncapi/eventmesh-messaging.yml) — [AsyncAPI Specification](https://www.asyncapi.com/docs/reference/specification/latest)
-- [Postman Collection](collections/eventmesh-admin.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/eventmesh-admin.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Documentation](https://eventmesh.apache.org/docs/introduction)
-- [Getting Started](https://eventmesh.apache.org/docs/instruction/quickstart)
-- [GitHub Organization](https://github.com/apache)
-- [GitHub Repository](https://github.com/apache/eventmesh)
-- [Blog](https://eventmesh.apache.org/blog)
+- [Getting started](https://eventmesh.apache.org/docs/instruction/quickstart)
 - [Support](https://eventmesh.apache.org/community)
-- [Spectral Rules](rules/apache-event-mesh-spectral-rules.yml)
-- [Vocabulary](vocabulary/apache-event-mesh-vocabulary.yaml)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Blog](https://eventmesh.apache.org/blog)
+- [GitHub](https://github.com/apache)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 53.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 16.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-event-mesh/](https://apis.io/providers/apache-event-mesh/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache EventMesh: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-event-mesh/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
